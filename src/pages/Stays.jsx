@@ -1,7 +1,10 @@
+import PageHeader from "../components/pageHeader/PageHeader";
+import bgImg from "../assets/image_01.jpg"
+
 const Stays = () => {
   return (
     <article>
-      <h1>Ophold</h1>
+      <PageHeader title="Vores Ophold" bgUrl={bgImg} />
     </article>
   );
 };
