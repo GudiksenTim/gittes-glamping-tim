@@ -1,7 +1,7 @@
 import { useRoutes } from "react-router";
 import "./App.css";
-import Home from "./pages/Home";
-import Stays from "./pages/Stays";
+import Home from "./pages/Home.jsx";
+import Stays from "./pages/Stays.jsx";
 import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 
