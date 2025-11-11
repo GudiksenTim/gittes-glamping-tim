@@ -1,7 +1,7 @@
 import { useRoutes } from "react-router";
 import "./App.css";
 import Home from "./pages/Home";
-import Stays from "./pages/stays";
+import Stays from "./pages/Stays";
 import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 
@@ -11,7 +11,7 @@ function App() {
   hvilke komponenter der skal vises baseret på URL-stien */
   const routes = useRoutes([
     { path: "/", element: <Home /> },
-    { path: "/Stays", element: <Stays /> },
+    { path: "/stays", element: <Stays /> },
   ]);
 
   return (
