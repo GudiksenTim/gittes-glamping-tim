@@ -13,7 +13,7 @@ const Home = () => {
         subtitle="Glamping"
         bgUrl={bgImg}
       />
-      <InfoSection />
+      <InfoSection page="Home"/>
       <Reviews />
     </article>
   );
