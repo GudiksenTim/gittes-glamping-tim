@@ -2,7 +2,7 @@ import styles from "./stayCard.module.css";
 import Button from "../button/Button";
 
 // Review er en child-komponent, som får data (props) fra forældre-komponenten
-const stayCard = ({ stay }) => {
+const StayCard = ({ stay }) => {
   return (
     <article className={styles.stayCard}>
       <header>
@@ -21,4 +21,4 @@ const stayCard = ({ stay }) => {
   );
 };
 
-export default Review;
+export default StayCard
