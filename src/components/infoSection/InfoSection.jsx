@@ -45,7 +45,7 @@ const InfoSection = ({ title, description, button, img, stayDetails, contact }) 
             <input type="text"/>
           </label>
           <label>Besked, Skriv datoer hvis det drejer sig om en booking
-            <input type="text"/>
+            <textarea></textarea>
           </label>
 
           <Button buttonText="Indsend"/>
