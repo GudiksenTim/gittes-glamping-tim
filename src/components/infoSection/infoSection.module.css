@@ -35,4 +35,28 @@
     flex-direction: column;
     
   }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-family: "Zen Loop";
+    font-size: 28px;
+  }
+
+  input {
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    background: #33626c;
+    padding: 8px 10px;
+    text-align: center;
+    color: white;
+    font-family: "Nanum Gothic";
+    font-size: 16px;
+  }
+
+
+
+
 }

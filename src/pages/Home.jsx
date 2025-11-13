@@ -14,16 +14,16 @@ const Home = () => {
       */}
       <PageHeader
         logo={logo}
-        titleOne='Gittes'
-        titleTwo='Glamping'
+        titleOne="Gittes"
+        titleTwo="Glamping"
         bgImg={bgImg}
         button
       />
       <InfoSection
-        title='Kom og prøv glamping hos Gitte'
+        title="Kom og prøv glamping hos Gitte"
         button
         img={gitte}
-        description='Vi er stolte af at byde dig velkommen til Gitte’s Glamping, hvor
+        description="Vi er stolte af at byde dig velkommen til Gitte’s Glamping, hvor
         hjertevarme og omsorg møder naturens skønhed og eventyr. Vores
         dedikerede team, anført af Gitte selv, er her for at skabe den perfekte
         ramme om din luksuriøse udendørsoplevelse. Vi stræber efter at skabe
@@ -31,7 +31,7 @@ const Home = () => {
         soloeventyrer. Vi tilbyder en bred vifte af aktiviteter og
         arrangementer, der passer til alle aldre og interesser. Udforsk naturen,
         slap af ved bålet, del historier med nye venner, eller find indre ro med
-        vores wellnessaktiviteter.'
+        vores wellnessaktiviteter."
       />
       <Reviews />
     </article>
