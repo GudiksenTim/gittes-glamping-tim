@@ -1,34 +1,59 @@
 import Button from "../button/Button";
 import styles from "./infoSection.module.css";
-import gitte from "../../assets/gitte.jpg";
+import { useNavigate } from "react-router";
 
-const InfoContent = {
-  Home: {
-    title: "Kom og prøv glamping hos Gitte",
-    body: "Vi er stolte af at byde dig velkommen til Gitte’s Glamping, hvor hjertevarme og omsorg møder naturens skønhed og eventyr. Voresdedikerede team, anført af Gitte selv, er her for at skabe den perfekte ramme om din luksuriøse udendørsoplevelse. Vi stræber efter at skabe minder og fordybelse, uanset om du besøger os som par, familie eller soloeventyrer. Vi tilbyder en bred vifte af aktiviteter og arrangementer, der passer til alle aldre og interesser. Udforsk naturen, slap af ved bålet, del historier med nye venner, eller find indre ro med vores wellnessaktiviteter.",
-    buttonText: "Se vores ophold",
-    image: gitte
-  },
-  Stays: {
-    title: "Vi har ophold til enhver smag",
-    body: "Vores glampingophold er skabt til at tilbyde en kombination af eventyr og afslapning. Det er den ideelle flugt fra byens støj og stress, og det perfekte sted at genoplade batterierne i en naturskøn indstilling. Book dit ophold i dag og giv dig selv lov til at fordybe dig i naturen og nyde luksus i det fri. Vi ser frem tid at byde dig velkommen til en oplevelse fyldt med komfort, eventyr og skønhed.",
-  },
+const InfoSection = ({ title, description, button, img, stayDetails, contact }) => {
+  const navigate = useNavigate();
+  console.log(stayDetails);
+  return (
+    <section className={styles.infoSection}>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      {img && <img src={img} alt='gitte' />}
+      {button && (
+        <Button
+          buttonText='Se vores ophold'
+          onClick={() => navigate("/stays")}
+        />
+      )}
+
+      {stayDetails && (
+        <div>
+          <ul>
+            {Array.isArray(stayDetails.includes)
+            ? stayDetails.includes.map((li, index) => <li key={index}>{li}</li>)
+            : typeof stayDetails.includes === "string"
+            ? <li>{stayDetails.includes}</li>
+            : null
+            }
+          </ul>
+          <br/>
+          <span>Pris {stayDetails.price},-</span> <br/>
+          <Button buttonText="Book nu"/>
+        </div>
+      )}
+
+      {contact && (
+        <form>
+          <label>Navn
+            <input type="text"/>
+          </label>
+          <label>Email
+            <input type="email"/>
+          </label>
+          <label>Hvad drejer henvendelsen om?
+            <input type="text"/>
+          </label>
+          <label>Besked, Skriv datoer hvis det drejer sig om en booking
+            <input type="text"/>
+          </label>
+
+          <Button buttonText="Indsend"/>
+
+        </form>
+      )}
+    </section>
+  );
 };
-
-const InfoSection = ({page}) => {
-
-  const Content = InfoContent[page] || null;
-
-      return (
-        <section className={styles.infoSection}>
-          <h2>{Content.title}</h2>
-          <p>{Content.body}</p>
-          {Content.image && <img src={Content.image} alt="Gitte" />}
-          {Content.buttonText && <Button buttonText={Content.buttonText} />}
-        </section>
-      );
-
-
-    };
 
 export default InfoSection;
