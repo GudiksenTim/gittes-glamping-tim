@@ -1,6 +1,7 @@
 import PageHeader from "../components/pageHeader/PageHeader";
 import bgImg from "../assets/image_04.jpg";
 import InfoSection from "../components/infoSection/InfoSection";
+import ActivitiesSection from "../components/activitiesSection/ActivitiesSection";
 
 const title = "Ingen skal kede sig hos Gitte"
 
@@ -16,6 +17,7 @@ const Activities = () => {
         title={title}
         description={description}
       />
+      <ActivitiesSection/>
     </article>
   );
 };
