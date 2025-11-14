@@ -16,10 +16,12 @@ const Activity = ({ activity }) => {
             <h3>{activity.date}</h3>
             <h3>{activity.time}</h3>
           </article>
-          <Button buttonIcon />
+          <i class="bi bi-heart-fill"></i>
         </section>
-        <Button buttonText="Læs mere" variant="transparent"/>
+        <Button buttonText="Læs mere" variant="transparent" />
+        
         <p>{activity.description}</p>
+        
       </div>
     </figure>
   );

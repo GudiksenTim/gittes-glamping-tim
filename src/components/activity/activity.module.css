@@ -10,7 +10,7 @@
         background-color: #C5B496;
         align-self: center;
         padding: 20px;
-        border-radius: 30px 0px 30px 0;
+        border-radius: 50px 0px 50px 0;
         transform: translateY(50%);
 
         p {
@@ -33,8 +33,9 @@
         background-color: #33626C;
         width: 90%;
         align-self: center;
-        border-radius: 30px 0 30px 0;
+        border-radius: 50px 0 50px 0;
         padding: 20px;
+        transform: translateY(-45px);
 
         section {
             display: flex;
@@ -51,17 +52,20 @@
                 margin-bottom: 5px;
             }
 
-            Button {
-                width: 30px;
+            i {
+                width: 50px;
                 height: 50px;
-                border-radius: 15px 0 15px 0;
-
-                i {
-                    6
-                }
+                
             }
     
         }
+
+        Button {
+            line-height: 0;
+            font-size: 40px;
+            border-radius: 50px 0 50px 0;
+        }
+        
     }
 
 
