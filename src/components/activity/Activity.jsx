@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Button from "../button/Button";
 import styles from "./activity.module.css";
 
 const Activity = ({ activity }) => {
   console.log(activity);
+
+  const [isShown, setShown] = useState(false)
 
   return (
     <figure className={styles.activity}>
@@ -18,9 +21,11 @@ const Activity = ({ activity }) => {
           </article>
           <i class="bi bi-heart-fill"></i>
         </section>
-        <Button buttonText="Læs mere" variant="transparent" />
+        <Button buttonText={isShown ? "Læs mindre" : "Læs mere"} variant="transparent" onClick={() => setShown(!isShown)} />
         
-        <p>{activity.description}</p>
+        {isShown && (
+        <p style={{padding:20}}>{activity.description}</p>
+        )}
         
       </div>
     </figure>
