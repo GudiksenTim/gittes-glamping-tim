@@ -7,13 +7,19 @@ const Activity = ({ activity }) => {
   return (
     <figure className={styles.activity}>
       <figcaption>
-        <p className={styles.title}>{activity.title}</p>
+        <p>{activity.title}</p>
       </figcaption>
       <img src={activity.image} alt={activity.title} />
       <div>
-        <Button
-          buttonText="Læs mere"
-        />
+        <section>
+          <article>
+            <h3>{activity.date}</h3>
+            <h3>{activity.time}</h3>
+          </article>
+          <Button buttonIcon />
+        </section>
+        <Button buttonText="Læs mere" variant="transparent"/>
+        <p>{activity.description}</p>
       </div>
     </figure>
   );
