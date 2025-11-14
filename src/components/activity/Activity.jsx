@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../button/Button";
 import styles from "./activity.module.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Activity = ({ activity }) => {
   console.log(activity);
@@ -19,7 +20,8 @@ const Activity = ({ activity }) => {
             <h3>{activity.date}</h3>
             <h3>{activity.time}</h3>
           </article>
-          <i class="bi bi-heart-fill"></i>
+          <Button buttonIcon="bi bi-heart-fill"/>
+          
         </section>
         <Button buttonText={isShown ? "Læs mindre" : "Læs mere"} variant="transparent" onClick={() => setShown(!isShown)} />
         
