@@ -26,7 +26,7 @@ const Activity = ({ activity }) => {
         <Button buttonText={isShown ? "Læs mindre" : "Læs mere"} variant="transparent" onClick={() => setShown(!isShown)} />
         
         {isShown && (
-        <p style={{padding:20}}>{activity.description}</p>
+        <p style={{padding:20, fontFamily:"Zen Loop", fontSize:25}}>{activity.description}</p>
         )}
         
       </div>

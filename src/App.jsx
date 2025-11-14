@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import StayDetails from "./pages/stayDetails/StayDetails";
 import Contact from "./pages/Contact"
 import Activities from "./pages/activities";
+import Likes from "./pages/Likes";
 
 
 // Parent/forældre komponent - Den 'hoved'-komponent der styrer visninger af andre komponenter
@@ -17,7 +18,8 @@ function App() {
     { path: "/stays", element: <Stays /> },
     { path: "/stays/:id", element: <StayDetails />},
     { path: "/contact", element: <Contact />},
-    { path: "/activities", element: <Activities />}
+    { path: "/activities", element: <Activities />},
+    { path: "/likes", element: <Likes />}
   ]);
 
   return (
