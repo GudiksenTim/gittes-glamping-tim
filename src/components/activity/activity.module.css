@@ -1,0 +1,80 @@
+.activity {
+
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    
+    figcaption {
+        max-width: 1040px;
+        width: 90%;
+        background-color: #C5B496;
+        align-self: center;
+        padding: 20px;
+        border-radius: 50px 0px 50px 0;
+        transform: translateY(50%);
+
+        p {
+            font-family: "Zen Loop";
+            font-size: 60px;
+        }
+
+    }
+    
+    img{
+        max-width: 1140px;
+        width: 100vw;
+        align-self: center;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        background-color: #33626C;
+        width: 90%;
+        align-self: center;
+        border-radius: 50px 0 50px 0;
+        padding: 20px;
+        transform: translateY(-45px);
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            height: 100px;
+    
+            h3 {
+                margin: 0;
+                padding: 0 10px;
+                line-height: 0.9;
+                text-align: start;
+                font-size: 32px;
+                margin-bottom: 5px;
+            }
+
+            Button {
+                padding: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 15px 0 15px 0;
+            }
+
+            i {
+                font-size: 25px;
+                color: rgba(255, 255, 255, 0.50);
+                
+            }
+    
+        }
+
+        Button {
+            line-height: 0;
+            font-size: 40px;
+            border-radius: 50px 0 50px 0;
+        }
+
+    }
+
+
+
+}
