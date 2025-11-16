@@ -1,7 +1,7 @@
 import Activity from "../activity/Activity"
 
 
-const LikesSection = (activities) => {
+const LikesSection = ({activities, toggleLike}) => {
 
     const likedActivities = activities.filter(act => act.liked)
     

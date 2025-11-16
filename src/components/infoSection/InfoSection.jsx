@@ -2,12 +2,12 @@ import Button from "../button/Button";
 import styles from "./infoSection.module.css";
 import { useNavigate } from "react-router";
 
-const InfoSection = ({ title, description, button, img, stayDetails, contact }) => {
+const InfoSection = ({ title, description, button, img, stayDetails, contact, countTitle}) => {
   const navigate = useNavigate();
-  console.log(stayDetails);
   return (
     <section className={styles.infoSection}>
       <h2>{title}</h2>
+      <h2>{countTitle}</h2>
       <p>{description}</p>
       {img && <img src={img} alt='gitte' />}
       {button && (
@@ -16,6 +16,8 @@ const InfoSection = ({ title, description, button, img, stayDetails, contact }) 
           onClick={() => navigate("/stays")}
         />
       )}
+
+      
 
       {stayDetails && (
         <div>

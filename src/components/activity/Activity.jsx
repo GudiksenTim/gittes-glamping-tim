@@ -3,10 +3,8 @@ import Button from "../button/Button";
 import styles from "./activity.module.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Activity = ({ activity }) => {
-  console.log(activity);
-
-  const [isShown, setShown] = useState(false)
+const Activity = ({ activity, onToggleLike }) => {
+  const [isShown, setShown] = useState(false);
 
   return (
     <figure className={styles.activity}>
@@ -30,6 +28,7 @@ const Activity = ({ activity }) => {
             }}
           />
         </section>
+
         <Button
           buttonText={isShown ? "Læs mindre" : "Læs mere"}
           variant="transparent"
