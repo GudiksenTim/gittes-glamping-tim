@@ -13,10 +13,16 @@ const ActivitiesSection = () => {
       );
 
       const data = await response.json();
+      const dataRdy = data.data;
 
-      console.log(data);
+      const formatted = dataRdy.map(card => ({
+        ...card, 
+        liked: false
+      }))
 
-      setActivities(data.data);
+      console.log(formatted);
+
+      setActivities(formatted);
     } catch (error) {
       console.log(error);
     }
@@ -28,10 +34,20 @@ const ActivitiesSection = () => {
     fetchActivities();
   }, []);
 
+  const toggleLike = (id) => {
+    setActivities(prev => 
+      prev.map(activity  => 
+        activity._id === id
+          ? {...activity, liked: !activity.liked}
+          : activity
+      )
+    )
+  }
+
   return (
     <section className="container">
       {activities.map((activity) => (
-        <Activity activity={activity} key={activity._id} />
+        <Activity activity={activity} key={activity._id} onToggleLike={() => toggleLike(activity._id)}/>
       ))}
     </section>
   );

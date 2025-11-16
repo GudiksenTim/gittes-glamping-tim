@@ -20,15 +20,27 @@ const Activity = ({ activity }) => {
             <h3>{activity.date}</h3>
             <h3>{activity.time}</h3>
           </article>
-          <Button buttonIcon="bi bi-heart-fill"/>
-          
+          <Button
+            buttonIcon="bi bi-heart-fill"
+            onClick={onToggleLike}
+            style={{
+              color: activity.liked
+                ? "rgba(255,255,255,1)"
+                : "rgba(255,255,255,0.5)",
+            }}
+          />
         </section>
-        <Button buttonText={isShown ? "Læs mindre" : "Læs mere"} variant="transparent" onClick={() => setShown(!isShown)} />
-        
+        <Button
+          buttonText={isShown ? "Læs mindre" : "Læs mere"}
+          variant="transparent"
+          onClick={() => setShown(!isShown)}
+        />
+
         {isShown && (
-        <p style={{padding:20, fontFamily:"Zen Loop", fontSize:25}}>{activity.description}</p>
+          <p style={{ padding: 20, fontFamily: "Zen Loop", fontSize: 25 }}>
+            {activity.description}
+          </p>
         )}
-        
       </div>
     </figure>
   );
