@@ -9,6 +9,7 @@ import StayDetails from "./pages/stayDetails/StayDetails";
 import Contact from "./pages/Contact";
 import Activities from "./pages/activities";
 import Likes from "./pages/Likes";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [activities, setActivities] = useState([]);
@@ -76,6 +77,7 @@ function App() {
       <Navigation />
       <main>{routes}</main>
       <Footer />
+      <ToastContainer autoClose={3000}/>
     </div>
   );
 }

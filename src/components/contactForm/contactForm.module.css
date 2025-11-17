@@ -1,4 +1,4 @@
-form {
+.form {
     display: flex;
     flex-direction: column;
     
@@ -8,12 +8,16 @@ form {
     display: flex;
     flex-direction: column;
     font-family: "Zen Loop";
-    font-size: 28px;
+    font-size: 34px;
+    margin: 20px 0px;
+  }
+
+  .error {
+    font-size: 1rem;
+    color: red;
   }
 
   input, textarea {
-    margin: 0px 20px;
-    margin-bottom: 30px;
     border-radius: 40px;
     border: 1px solid #fff;
     background: #33626c;
