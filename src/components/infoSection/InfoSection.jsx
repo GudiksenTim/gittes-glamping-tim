@@ -1,10 +1,12 @@
 import Button from "../button/Button";
+import ContactForm from "../contactForm/ContactForm";
 import styles from "./infoSection.module.css";
 import { useNavigate } from "react-router";
 
 const InfoSection = ({ title, description, button, img, stayDetails, contact, countTitle}) => {
   const navigate = useNavigate();
   return (
+
     <section className={styles.infoSection}>
       <h2>{title}</h2>
       <h2>{countTitle}</h2>
@@ -15,9 +17,8 @@ const InfoSection = ({ title, description, button, img, stayDetails, contact, co
           buttonText='Se vores ophold'
           onClick={() => navigate("/stays")}
         />
-      )}
-
       
+      )}
 
       {stayDetails && (
         <div>
@@ -35,27 +36,25 @@ const InfoSection = ({ title, description, button, img, stayDetails, contact, co
         </div>
       )}
 
-      {contact && (
-        <form>
-          <label>Navn
-            <input type="text"/>
-          </label>
-          <label>Email
-            <input type="email"/>
-          </label>
-          <label>Hvad drejer henvendelsen om?
-            <input type="text"/>
-          </label>
-          <label>Besked, Skriv datoer hvis det drejer sig om en booking
-            <textarea></textarea>
-          </label>
+      {contact && (<ContactForm/>)}
 
-          <Button buttonText="Indsend"/>
-
-        </form>
-      )}
     </section>
-  );
-};
+
+  )
+}
+
+
+    
+
+      
+
+
+
+
+  
+
+    
+
+      
 
 export default InfoSection;
