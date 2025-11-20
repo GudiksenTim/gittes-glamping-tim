@@ -5,17 +5,18 @@
   }
 
   label {
-    display: flex;
-    flex-direction: column;
-    font-family: "Zen Loop";
-    font-size: 34px;
-    margin: 20px 0px;
-  }
-
+      display: flex;
+      flex-direction: column;
+      font-family: "Zen Loop";
+      font-size: 34px;
+      margin: 20px 0px;
+    }
+    
   .error {
-    font-size: 1rem;
-    color: red;
-  }
+      font-size: 22px !important;
+      color: rgb(255, 70, 70);
+      font-weight: 700;
+    }
 
   input, textarea {
     border-radius: 40px;
