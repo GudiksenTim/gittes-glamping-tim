@@ -20,6 +20,7 @@ const InfoSection = ({ title, description, button, img, stayDetails, contact, co
       
       )}
 
+      {/* viser kun indhold hvis den rigtige side er i dom */}
       {stayDetails && (
         <div>
           <ul>

@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 
 const ContactForm = () => {
+    //konstatere valideringskrav for formularen
   const schema = yup.object().shape({
     name: yup.string().required("Navn er påkrævet"),
     email: yup.string().email("Ugyldig email").required("Email er påkrævet"),
@@ -25,6 +26,7 @@ const ContactForm = () => {
     resolver: yupResolver(schema),
   });
 
+  //send data til API
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
@@ -38,6 +40,7 @@ const ContactForm = () => {
 
       console.log(response);
 
+      //vis success eller fejl 
       if (!response.ok) {
         throw new Error("Serverfejl");
       } else {

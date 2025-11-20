@@ -1,2 +1,79 @@
 .navigation {
+  color: white;
+  font-family: "Zen Loop";
+  position: relative;
+  height: 0;
+}
+
+/* Burger Icon */
+.burger {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+  ;
+  
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 20px 0 20px 0;
+  
+  background-color: #829B97;
+  
+  
+}
+
+.burger span {
+  height: 3px;
+  width: 60%;
+  align-self: center;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.burger span:nth-child(1) {
+  margin-top: 15px;
+}
+
+/* Animation når menuen er åben */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -9px);
+}
+
+/* Menu styling */
+.menu {
+  list-style: none;
+  background-color: #829B97;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.menu.show {
+  display: flex;
+  height: 80vh;
+  justify-content: center  ;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+}
+
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
