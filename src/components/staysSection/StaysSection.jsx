@@ -14,8 +14,6 @@ const StaysSection = () => {
 
       const data = await response.json();
 
-      console.log(data);
-
       setStays(data.data);
     } catch (error) {
       console.log(error);
