@@ -24,6 +24,7 @@
         max-width: 1140px;
         width: 100vw;
         align-self: center;
+        border-radius: 40px;
     }
 
     div {

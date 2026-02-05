@@ -17,7 +17,7 @@ const Navigation = () => {
       </NavLink>
       <div
         className={`${styles.burger} ${open ? styles.open : ""}`}
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen(!open)}  
       >
         <span></span>
         <span></span>

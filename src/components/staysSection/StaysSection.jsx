@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Stay from "../stay/Stay";
+import styles from "./staysSection.module.css"
 
 const StaysSection = () => {
   /* State variabel der deklares med Reacts indbyggede hook: useState. Dens initialvalue/standardværdi/defaultvalue er et tomt array*/
@@ -28,7 +29,7 @@ const StaysSection = () => {
   }, []);
 
   return (
-    <section className='container'>
+    <section className={styles.container}>
       {stays.map((stay) => (
         <Stay stay={stay} key={stay._id} />
       ))}

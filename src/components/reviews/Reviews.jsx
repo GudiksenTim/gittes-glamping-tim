@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Review from "../review/Review";
+import styles from "./reviews.module.css"
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -24,7 +25,7 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section className='container'>
+    <section className={styles.container}>
       {reviews.map((review) => (
         <Review review={review} key={review._id} />
       ))}
